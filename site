@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Hoz Auto Electrical & Diagnostics | Precision Auto Care</title>
+    <title>Hoz Auto Electrical & Diagnostics | SA's Elite Auto Care</title>
     <!-- Font Awesome 6 (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts: Sporty & Elegant -->
+    <!-- Google Fonts: Modern & Bold -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -22,7 +22,7 @@
             scroll-behavior: smooth;
         }
 
-        /* black/red/gold/white theme */
+        /* black/red/gold/white theme - premium feel */
         :root {
             --black: #0b0b0b;
             --deep-red: #b91c1c;
@@ -35,7 +35,6 @@
             --border-red: #b91c1c55;
         }
 
-        /* scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -47,7 +46,6 @@
             border-radius: 10px;
         }
 
-        /* typography */
         h1, h2, h3 {
             font-weight: 700;
             letter-spacing: -0.02em;
@@ -65,9 +63,9 @@
             color: var(--gold);
         }
 
-        /* header / navbar */
+        /* navbar */
         .navbar {
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(10, 10, 10, 0.96);
             backdrop-filter: blur(12px);
             padding: 1rem 2rem;
             display: flex;
@@ -107,7 +105,7 @@
             color: var(--gold);
         }
 
-        /* hero section */
+        /* hero */
         .hero {
             background: linear-gradient(135deg, #0a0a0a 0%, #1c0a0a 100%);
             padding: 4rem 2rem;
@@ -137,7 +135,6 @@
             margin-bottom: 1rem;
         }
 
-        /* container */
         .container {
             max-width: 1300px;
             margin: 0 auto;
@@ -198,7 +195,7 @@
             transform: scale(1.02);
         }
 
-        /* CAR SELECTOR SECTION (BRAND + MODEL + ISSUE) */
+        /* diagnostic section */
         .diagnostic-section {
             background: #0e0e0e;
             border-radius: 36px;
@@ -239,13 +236,13 @@
             width: 180px;
         }
 
-        /* brand grid (logos & names) */
+        /* brand grid (logos + names) */
         .brands-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
             gap: 1rem;
             margin: 2rem 0;
-            max-height: 320px;
+            max-height: 360px;
             overflow-y: auto;
             padding: 0.5rem;
             border-radius: 28px;
@@ -279,7 +276,7 @@
             font-size: 0.8rem;
             color: #eee;
         }
-        /* form styling */
+        /* form */
         .car-form {
             background: #121212;
             padding: 1.5rem;
@@ -376,7 +373,7 @@
     <nav class="navbar">
         <div class="logo">
             <h2><span>HOZ</span> <span>AUTO</span></h2>
-            <p>ELECTRICAL & DIAGNOSTICS</p>
+            <p>ELECTRICAL & DIAGNOSTICS | SOUTH AFRICA</p>
         </div>
         <div class="nav-links">
             <a href="#services">Services</a>
@@ -387,9 +384,9 @@
 </header>
 
 <section class="hero">
-    <div class="hero-badge"><i class="fas fa-microchip"></i> Premium Auto Electrical & Diagnostics</div>
-    <h1>Powering Your Drive with <span>Precision</span></h1>
-    <p>Advanced electrical system repair, ECU diagnostics, wiring solutions & complete vehicle troubleshooting. Serving all makes and models with German precision & care.</p>
+    <div class="hero-badge"><i class="fas fa-microchip"></i> Premium Auto Electrical & Diagnostics • Gauteng & Nationwide</div>
+    <h1>Powering South African Roads with <span>Precision</span></h1>
+    <p>Advanced electrical system repair, ECU diagnostics, wiring solutions & complete vehicle troubleshooting. From Jo'burg to Cape Town, we keep SA driving.</p>
 </section>
 
 <!-- Services Section -->
@@ -423,17 +420,17 @@
     </div>
 </div>
 
-<!-- CAR SELECTOR & DIAGNOSTIC REQUEST (BRAND SELECTION, SEARCH, MODEL, ISSUE) -->
+<!-- CAR SELECTOR & DIAGNOSTIC REQUEST - with ALL South African brands -->
 <div class="container" id="car-selector">
     <div class="diagnostic-section">
         <div class="selector-header">
-            <h2><i class="fas fa-search" style="margin-right: 12px;"></i> Select Your Vehicle</h2>
+            <h2><i class="fas fa-search" style="margin-right: 12px;"></i> Select Your Vehicle (SA Market)</h2>
             <div class="search-box">
                 <i class="fas fa-filter"></i>
-                <input type="text" id="brandSearch" placeholder="Search brand... (e.g. BMW)" autocomplete="off">
+                <input type="text" id="brandSearch" placeholder="Search brand... (e.g. Toyota, VW)" autocomplete="off">
             </div>
         </div>
-        <p style="margin-bottom: 10px;">Choose a brand from below (only one brand can be selected at a time, others will be greyed out).</p>
+        <p style="margin-bottom: 10px;">✅ Choose a brand — only one can be selected, others will be greyed out. Tap brand to select/deselect.</p>
         <div class="brands-grid" id="brandsGrid"></div>
 
         <div class="car-form">
@@ -445,12 +442,12 @@
                 </div>
                 <div class="input-group">
                     <label><i class="fas fa-tag"></i> Model (write manually)</label>
-                    <input type="text" id="carModel" placeholder="e.g. 330i, C-Class, Golf GTI">
+                    <input type="text" id="carModel" placeholder="e.g. Hilux, Polo, i30, CX-5">
                 </div>
             </div>
             <div class="input-group">
                 <label><i class="fas fa-exclamation-triangle"></i> Describe the issue / fault</label>
-                <textarea id="issueDesc" placeholder="Example: Battery draining, engine light on, no crank, intermittent starting issues, sensor malfunction..."></textarea>
+                <textarea id="issueDesc" placeholder="Example: Battery draining, engine light on, no crank, intermittent starting issues, sensor malfunction, electrical short..."></textarea>
             </div>
             <div style="display: flex; justify-content: flex-end; margin-top: 1.2rem;">
                 <button class="submit-wa" id="submitDiagnosticBtn"><i class="fab fa-whatsapp"></i> Send Diagnostic Request →</button>
@@ -462,89 +459,123 @@
     </div>
 </div>
 
-<!-- extra contact / location -->
+<!-- footer contact -->
 <footer id="contact">
     <div style="max-width: 800px; margin: auto;">
-        <i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> <strong>Hoz Auto Electrical & Diagnostics</strong> — Nairobi, Kenya | <i class="fas fa-phone-alt"></i> +254 700 000 000<br/>
-        <p style="margin-top: 1rem;">© 2025 Hoz Auto — Precision Electrical & Diagnostic Experts</p>
+        <i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> <strong>Hoz Auto Electrical & Diagnostics</strong> — Johannesburg, South Africa | <i class="fas fa-phone-alt"></i> +27 71 234 5678<br/>
+        <p style="margin-top: 1rem;">© 2025 Hoz Auto — Precision Electrical & Diagnostic Experts | Serving all SA provinces</p>
         <div style="margin-top: 1rem;">
-            <a href="https://wa.me/254700000000?text=Hello%20Hoz%20Auto%2C%20I%20need%20assistance%20with%20my%20vehicle" target="_blank" style="color:var(--gold); margin: 0 10px;"><i class="fab fa-whatsapp"></i> WhatsApp Business</a>
+            <a href="https://wa.me/27712345678?text=Hello%20Hoz%20Auto%2C%20I%20need%20assistance%20with%20my%20vehicle" target="_blank" style="color:var(--gold); margin: 0 10px;"><i class="fab fa-whatsapp"></i> WhatsApp Business</a>
         </div>
     </div>
 </footer>
 
 <script>
-    // ---------- Car Brands Database with logo icons (font awesome / emoji fallback) ----------
-    const carBrands = [
+    // ---------- COMPREHENSIVE CAR BRANDS FOUND IN SOUTH AFRICA ----------
+    // includes popular local brands, imports, and emerging EV brands
+    const carBrandsSA = [
         { name: "Toyota", logo: "🚗", iconClass: "fas fa-car" },
-        { name: "Honda", logo: "🏎️", iconClass: "fas fa-car-side" },
+        { name: "Volkswagen", logo: "🚙", iconClass: "fas fa-caravan" },
+        { name: "Ford", logo: "🐎", iconClass: "fas fa-horse-head" },
+        { name: "Hyundai", logo: "🆎", iconClass: "fas fa-italic" },
+        { name: "Kia", logo: "🔑", iconClass: "fas fa-key" },
         { name: "BMW", logo: "🔵", iconClass: "fab fa-bluetooth-b" },
         { name: "Mercedes-Benz", logo: "⭐", iconClass: "fas fa-star" },
         { name: "Audi", logo: "🔘", iconClass: "fas fa-circle" },
-        { name: "Ford", logo: "🐎", iconClass: "fas fa-horse-head" },
-        { name: "Chevrolet", logo: "🏁", iconClass: "fas fa-flag-checkered" },
-        { name: "Volkswagen", logo: "🚙", iconClass: "fas fa-caravan" },
-        { name: "Hyundai", logo: "🆎", iconClass: "fas fa-italic" },
-        { name: "Kia", logo: "🔑", iconClass: "fas fa-key" },
         { name: "Nissan", logo: "💨", iconClass: "fas fa-wind" },
+        { name: "Honda", logo: "🏎️", iconClass: "fas fa-car-side" },
         { name: "Mazda", logo: "🌀", iconClass: "fas fa-fan" },
-        { name: "Subaru", logo: "⭐", iconClass: "fas fa-star-of-life" },
-        { name: "Lexus", logo: "💎", iconClass: "fas fa-gem" },
-        { name: "Jeep", logo: "⛰️", iconClass: "fas fa-mountain" },
-        { name: "Land Rover", logo: "🌍", iconClass: "fas fa-globe" },
-        { name: "Porsche", logo: "🐎", iconClass: "fas fa-crown" },
-        { name: "Volvo", logo: "⚙️", iconClass: "fas fa-cogs" },
-        { name: "Tesla", logo: "⚡", iconClass: "fas fa-bolt" },
-        { name: "Mitsubishi", logo: "🔺", iconClass: "fas fa-shapes" },
         { name: "Suzuki", logo: "🏍️", iconClass: "fas fa-motorcycle" },
-        { name: "Renault", logo: "💠", iconClass: "fas fa-diamond" }
+        { name: "Renault", logo: "💠", iconClass: "fas fa-diamond" },
+        { name: "Chevrolet", logo: "🏁", iconClass: "fas fa-flag-checkered" },
+        { name: "Opel", logo: "⚡", iconClass: "fas fa-bolt" },
+        { name: "Peugeot", logo: "🦁", iconClass: "fas fa-paw" },
+        { name: "Citroën", logo: "🧲", iconClass: "fas fa-magnet" },
+        { name: "Land Rover", logo: "🌍", iconClass: "fas fa-globe" },
+        { name: "Jaguar", logo: "🐆", iconClass: "fas fa-gem" },
+        { name: "Volvo", logo: "⚙️", iconClass: "fas fa-cogs" },
+        { name: "Subaru", logo: "⭐", iconClass: "fas fa-star-of-life" },
+        { name: "Mitsubishi", logo: "🔺", iconClass: "fas fa-shapes" },
+        { name: "Isuzu", logo: "🏔️", iconClass: "fas fa-mountain" },
+        { name: "Mahindra", logo: "🌾", iconClass: "fas fa-tractor" },
+        { name: "GWM (Great Wall)", logo: "🏯", iconClass: "fas fa-building" },
+        { name: "Chery", logo: "🐉", iconClass: "fas fa-dragon" },
+        { name: "BAIC", logo: "🏛️", iconClass: "fas fa-landmark" },
+        { name: "Haval", logo: "🏞️", iconClass: "fas fa-tree" },
+        { name: "Foton", logo: "🚛", iconClass: "fas fa-truck" },
+        { name: "Porsche", logo: "🐎", iconClass: "fas fa-crown" },
+        { name: "Ferrari", logo: "🐴", iconClass: "fas fa-horse" },
+        { name: "Lamborghini", logo: "🐂", iconClass: "fas fa-bull" },
+        { name: "Maserati", logo: "🔱", iconClass: "fas fa-trident" },
+        { name: "Bentley", logo: "🪽", iconClass: "fas fa-feather" },
+        { name: "Rolls-Royce", logo: "🎩", iconClass: "fas fa-crown" },
+        { name: "Mini", logo: "🎲", iconClass: "fas fa-cube" },
+        { name: "Jeep", logo: "⛰️", iconClass: "fas fa-mountain" },
+        { name: "Alfa Romeo", logo: "🐍", iconClass: "fas fa-snake" },
+        { name: "Fiat", logo: "🍕", iconClass: "fas fa-utensils" },
+        { name: "DS Automobiles", logo: "✨", iconClass: "fas fa-sparkle" },
+        { name: "Lexus", logo: "💎", iconClass: "fas fa-gem" },
+        { name: "Infiniti", logo: "♾️", iconClass: "fas fa-infinity" },
+        { name: "Mahindra", logo: "🌿", iconClass: "fas fa-leaf" },   // duplicate avoidance but fine
+        { name: "Tata", logo: "🐘", iconClass: "fas fa-elephant" },
+        { name: "BYD", logo: "🔋", iconClass: "fas fa-battery-full" },
+        { name: "Volkswagen Commercial", logo: "🚐", iconClass: "fas fa-shuttle-van" },
+        { name: "LDV", logo: "📦", iconClass: "fas fa-box" },
+        { name: "Chana", logo: "🌠", iconClass: "fas fa-star" }
     ];
+
+    // remove duplicates (just in case Mahindra appears twice, but we keep unique by name)
+    const uniqueBrandsMap = new Map();
+    carBrandsSA.forEach(b => {
+        if (!uniqueBrandsMap.has(b.name)) uniqueBrandsMap.set(b.name, b);
+    });
+    const southAfricanBrands = Array.from(uniqueBrandsMap.values());
 
     let selectedBrandName = null;   // currently selected brand
     let currentActiveElement = null;
 
-    // Helper: render brand grid with search filter & disabled logic
+    // render brand grid with search filter & disabled logic (only one selectable)
     function renderBrands(filterText = "") {
         const grid = document.getElementById("brandsGrid");
         if (!grid) return;
         const filterLower = filterText.toLowerCase().trim();
-        const filtered = carBrands.filter(b => b.name.toLowerCase().includes(filterLower));
+        const filtered = southAfricanBrands.filter(b => b.name.toLowerCase().includes(filterLower));
         grid.innerHTML = "";
+        if (filtered.length === 0) {
+            grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:2rem;">🚫 No brands match "${filterText}"</div>`;
+            return;
+        }
         filtered.forEach(brand => {
             const card = document.createElement("div");
             card.className = "brand-card";
             if (selectedBrandName === brand.name) {
                 card.classList.add("active-brand");
             }
-            // disable if a brand is selected but this card is NOT the selected one
+            // if a brand is selected globally, disable all cards except the selected one
             if (selectedBrandName !== null && selectedBrandName !== brand.name) {
                 card.classList.add("disabled-brand");
             } else {
                 card.classList.remove("disabled-brand");
             }
-            // inner content: logo + name
             const logoDiv = document.createElement("div");
             logoDiv.className = "brand-logo";
-            // show either fontawesome if possible or emoji
             logoDiv.innerHTML = brand.logo ? brand.logo : `<i class="${brand.iconClass}"></i>`;
             const nameSpan = document.createElement("div");
             nameSpan.className = "brand-name";
             nameSpan.innerText = brand.name;
             card.appendChild(logoDiv);
             card.appendChild(nameSpan);
-            // click event only if not disabled (or we can allow click but logic will handle)
             card.addEventListener("click", (e) => {
                 e.stopPropagation();
-                // if this brand is already selected, we can deselect? better: if same brand clicked -> allow deselect? let's implement deselect: set null
                 if (selectedBrandName === brand.name) {
-                    // deselect: clear selection
+                    // DESELECT: clear selection
                     selectedBrandName = null;
                     document.getElementById("selectedBrandDisplay").value = "";
                     if (currentActiveElement) currentActiveElement.classList.remove("active-brand");
                     currentActiveElement = null;
-                    renderBrands(filterText);  // re-render to enable all
+                    renderBrands(filterText);
                 } else {
-                    // select new brand (override)
+                    // select new brand
                     selectedBrandName = brand.name;
                     document.getElementById("selectedBrandDisplay").value = brand.name;
                     renderBrands(filterText);
@@ -555,12 +586,9 @@
                 currentActiveElement = card;
             }
         });
-        if (filtered.length === 0) {
-            grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:2rem;">🚫 No brands match "${filterText}"</div>`;
-        }
     }
 
-    // live search input
+    // search input handler
     const searchInput = document.getElementById("brandSearch");
     if (searchInput) {
         searchInput.addEventListener("input", (e) => {
@@ -568,18 +596,15 @@
         });
     }
 
-    // initial render with no brand selected
+    // initial render
     renderBrands("");
 
-    // update the display when brand selected (already inside renderBrands, but also reflect in readonly)
-    // we also need to clear if model/issue and send wa
+    // ---------- WhatsApp integration ----------
+    // South African business number (replace with actual, placeholder)
+    const BUSINESS_PHONE = "27712345678";   // format without '+' for South Africa
 
-    // ---------- WhatsApp Messaging Logic ----------
-    // Business phone number (replace with actual number but use placeholder for demo)
-    const BUSINESS_PHONE = "254700000000";   // replace with real number, include country code without '+'
-    
     function generateWhatsAppLink(service = null, brand, model, issue) {
-        let baseMessage = `Hello Hoz Auto Electrical & Diagnostics, I need assistance with my vehicle.`;
+        let baseMessage = `Hello Hoz Auto Electrical & Diagnostics (SA), I need assistance with my vehicle.`;
         if (brand && brand.trim() !== "") {
             baseMessage += `\n• Brand: ${brand}`;
         }
@@ -597,7 +622,7 @@
         return `https://wa.me/${BUSINESS_PHONE}?text=${encoded}`;
     }
 
-    // For service cards: attach WhatsApp dynamic
+    // For service cards: attach WhatsApp with current fields
     const waButtons = document.querySelectorAll(".wa-service");
     waButtons.forEach(btn => {
         btn.addEventListener("click", (e) => {
@@ -611,7 +636,7 @@
         });
     });
 
-    // Diagnostic form submit button (send full vehicle + issue)
+    // Diagnostic form submit button
     const submitDiag = document.getElementById("submitDiagnosticBtn");
     if (submitDiag) {
         submitDiag.addEventListener("click", () => {
@@ -619,48 +644,24 @@
             const modelVal = document.getElementById("carModel")?.value.trim() || "";
             const issueVal = document.getElementById("issueDesc")?.value.trim() || "";
             if (!brandVal && !modelVal && !issueVal) {
-                alert("Please select a car brand (or provide at least model/issue) to proceed.");
+                alert("⚠️ Please select a car brand or provide at least model/issue to proceed.");
                 return;
             }
             if (!brandVal) {
-                // no brand selected but we can still send, but maybe inform user
-                if (!confirm("You haven't selected a brand. Continue anyway?")) return;
+                if (!confirm("You haven't selected a brand. Continue anyway with model and issue?")) return;
             }
             const waLink = generateWhatsAppLink(null, brandVal, modelVal, issueVal);
             window.open(waLink, "_blank");
         });
     }
 
-    // additionally ensure that when someone manually changes model/issue it's captured.
-
-    // also reset selection if needed: optional double click on brand to disable, we already implemented deselect on same brand
-    // for UX, add small reset button? not mandatory, but we will show a note.
-    // also on each service request we already include the selected brand if any
-
-    // extra: gray-out others feature is fully dynamic via renderBrands based on selectedBrandName.
-
-    // Update display if user manually writes something else, the global selectedBrandDisplay is readonly anyway
-    // Also add event to handle any new model/issue prefilled for services? perfect.
-
-    // add optional live info for selected brand on right side.
-    console.log("Website ready | Hoz Auto Electrical & Diagnostics | Black/Red/Gold theme");
-
-    // For additional perfectness: if no brand selected, user still can send diagnostic request with model/issue.
-    // Also add fallback for service buttons using current form fields.
-    // Attach a small helper for service card to show current selected details?
-    // Already done.
-
-    // also ensure that brand search input does not conflict with grey out logic: after search, we keep same disabled state based on selectedBrandName
-    // Add reset ability? if needed small reset button can be added but UI fine
-    // Additionally i add a floating reset? but not needed
-
-    // Provide default phone number is placeholder: In production change BUSINESS_PHONE.
-    // Also we can provide contact footer: updated number.
-
-    // Let's also add an optional tooltip for disabled brands (showing info)
+    // final style for disabled brands & active brand
     const style = document.createElement('style');
     style.textContent = `.brand-card.disabled-brand { cursor: not-allowed; opacity: 0.4; filter: grayscale(0.5); transition: 0.1s; } .brand-card:not(.disabled-brand):hover { background: #2c2418; border-color: #f5b04280; } .brand-card.active-brand { background: #2a1f0e; box-shadow: 0 0 0 1px gold; }`;
     document.head.appendChild(style);
+
+    // small console confirm
+    console.log("Hoz Auto SA | Loaded with " + southAfricanBrands.length + " local brands");
 </script>
 </body>
 </html>
