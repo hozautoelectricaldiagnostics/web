@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Hoz Auto Electrical & Diagnostics | SA's Elite Auto Care</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Modern & Bold -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            scroll-behavior: smooth;
+        }
+
+        /* black/red/gold/white theme - premium feel */
+        :root {
+            --black: #0b0b0b;
+            --deep-red: #b91c1c;
+            --bright-red: #e11d1d;
+            --gold: #f5b042;
+            --gold-light: #ffcd7e;
+            --white: #fefefe;
+            --gray-light: #2a2a2a;
+            --card-bg: #111111;
+            --border-red: #b91c1c55;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e1e1e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--deep-red);
+            border-radius: 10px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            border-left: 6px solid var(--gold);
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+            color: var(--white);
+        }
+
+        .section-title span {
+            color: var(--gold);
+        }
+
+        /* navbar */
+        .navbar {
+            background: rgba(10, 10, 10, 0.96);
+            backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--border-red);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo h2 {
+            font-size: 1.7rem;
+            font-weight: 800;
+        }
+        .logo h2 span:first-child {
+            color: var(--gold);
+        }
+        .logo h2 span:last-child {
+            color: var(--deep-red);
+        }
+        .logo p {
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            color: #aaa;
+        }
+
+        .nav-links a {
+            color: #ddd;
+            margin-left: 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* hero */
+        .hero {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1c0a0a 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--deep-red);
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        .hero h1 span {
+            color: var(--gold);
+        }
+        .hero-description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #d0d0d0;
+        }
+        .hero-tagline {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--gold);
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        .hero-badge {
+            background: var(--deep-red);
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem 2rem;
+        }
+
+        /* services grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin-top: 1rem;
+        }
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid #2c2c2c;
+            border-radius: 24px;
+            padding: 1.8rem;
+            transition: all 0.25s ease;
+            text-align: center;
+        }
+        .service-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -12px rgba(185,28,28,0.2);
+        }
+        .service-icon {
+            font-size: 2.8rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: white;
+        }
+        .service-card p {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+        }
+        .whatsapp-btn {
+            display: inline-block;
+            margin-top: 1.2rem;
+            background: #25D366;
+            color: black;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: 0.2s;
+        }
+        .whatsapp-btn i {
+            margin-right: 6px;
+        }
+        .whatsapp-btn:hover {
+            background: #20b859;
+            transform: scale(1.02);
+        }
+
+        /* diagnostic section */
+        .diagnostic-section {
+            background: #0e0e0e;
+            border-radius: 36px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid #2a2a2a;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+        }
+        .selector-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.8rem;
+        }
+        .selector-header h2 {
+            color: var(--gold);
+            font-size: 1.8rem;
+        }
+        .search-box {
+            background: #1e1e1e;
+            padding: 0.5rem 1rem;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid #333;
+        }
+        .search-box i {
+            color: var(--gold);
+        }
+        .search-box input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 0.9rem;
+            width: 180px;
+        }
+
+        /* brand grid (logos + names) */
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            max-height: 360px;
+            overflow-y: auto;
+            padding: 0.5rem;
+            border-radius: 28px;
+            background: #080808;
+        }
+        .brand-card {
+            background: #151515;
+            border-radius: 28px;
+            padding: 0.8rem 0.4rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #2c2c2c;
+        }
+        .brand-card.active-brand {
+            border: 2px solid var(--gold);
+            background: #1f1a10;
+            box-shadow: 0 0 0 2px rgba(245,176,66,0.3);
+        }
+        .brand-card.disabled-brand {
+            opacity: 0.35;
+            filter: grayscale(0.4);
+            pointer-events: none;
+        }
+        .brand-logo {
+            font-size: 2.2rem;
+            margin-bottom: 6px;
+        }
+        .brand-name {
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: #eee;
+        }
+        /* form */
+        .car-form {
+            background: #121212;
+            padding: 1.5rem;
+            border-radius: 28px;
+            margin-top: 1rem;
+        }
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .input-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--gold-light);
+        }
+        .input-group input, .input-group textarea {
+            width: 100%;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            padding: 0.8rem 1rem;
+            border-radius: 20px;
+            color: white;
+            font-family: inherit;
+            outline: none;
+            transition: 0.2s;
+        }
+        .input-group input:focus, .input-group textarea:focus {
+            border-color: var(--gold);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+        .submit-wa {
+            background: var(--deep-red);
+            color: white;
+            border: none;
+            padding: 0.9rem 2rem;
+            font-weight: bold;
+            border-radius: 60px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.2s;
+        }
+        .submit-wa:hover {
+            background: var(--gold);
+            color: #0a0a0a;
+        }
+        .info-note {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            text-align: center;
+            color: #aaa;
+        }
+
+        footer {
+            background: #050505;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--deep-red);
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 760px) {
+            .navbar {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .nav-links a {
+                margin: 0 0.8rem;
+            }
+            .section-title {
+                font-size: 1.7rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+        .highlight-gold {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <h2><span>HOZ</span> <span>AUTO</span></h2>
+            <p>ELECTRICAL & DIAGNOSTICS | SOUTH AFRICA</p>
+        </div>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#car-selector">Diagnostic Tool</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-badge"><i class="fas fa-microchip"></i> #web</div>
+    <h1>Specialists in vehicle <span>electrical repairs</span> and advanced diagnostics.</h1>
+    <div class="hero-description">
+        We offer accurate fault finding, wiring solutions, and reliable service to keep your car running smoothly.
+    </div>
+    <div class="hero-tagline">
+        <i class="fas fa-bolt" style="color: var(--gold);"></i> Powered by expertise. Driven by trust. <i class="fas fa-heart" style="color: var(--deep-red);"></i>
+    </div>
+</section>
+
+<!-- Services Section -->
+<div class="container" id="services">
+    <h2 class="section-title">What We Do <span>✦</span></h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-car-battery"></i></div>
+            <h3>Electrical Repairs</h3>
+            <p>Alternators, starters, wiring, lighting, and complete vehicle electrical troubleshooting.</p>
+            <a href="#" class="whatsapp-btn wa-service" data-service="Electrical Repairs"><i class="fab fa-whatsapp"></i> Inquire via WhatsApp</a>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-microchip"></i></div>
+            <h3>ECU Diagnostics</h3>
+            <p>Engine control unit scanning, reprogramming, and fault code analysis.</p>
+            <a href="#" class="whatsapp-btn wa-service" data-service="ECU Diagnostics"><i class="fab fa-whatsapp"></i> Inquire via WhatsApp</a>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Performance Diagnostics</h3>
+            <p>Sensor calibration, live data monitoring, advanced drivability solutions.</p>
+            <a href="#" class="whatsapp-btn wa-service" data-service="Performance Diagnostics"><i class="fab fa-whatsapp"></i> Inquire via WhatsApp</a>
+        </div>
+        <div class="service-card">
+            <div class="service-icon"><i class="fas fa-tools"></i></div>
+            <h3>Complete System Check</h3>
+            <p>ABS, Airbag, transmission modules, and full vehicle health reports.</p>
+            <a href="#" class="whatsapp-btn wa-service" data-service="Complete System Check"><i class="fab fa-whatsapp"></i> Inquire via WhatsApp</a>
+        </div>
+    </div>
+</div>
+
+<!-- CAR SELECTOR & DIAGNOSTIC REQUEST - with ALL South African brands -->
+<div class="container" id="car-selector">
+    <div class="diagnostic-section">
+        <div class="selector-header">
+            <h2><i class="fas fa-search" style="margin-right: 12px;"></i> Select Your Vehicle (SA Market)</h2>
+            <div class="search-box">
+                <i class="fas fa-filter"></i>
+                <input type="text" id="brandSearch" placeholder="Search brand... (e.g. Toyota, VW)" autocomplete="off">
+            </div>
+        </div>
+        <p style="margin-bottom: 10px;">✅ Choose a brand — only one can be selected, others will be greyed out. Tap brand to select/deselect.</p>
+        <div class="brands-grid" id="brandsGrid"></div>
+
+        <div class="car-form">
+            <h3 style="color: var(--gold); margin-bottom: 1rem;"><i class="fas fa-clipboard-list"></i> Vehicle Diagnostic Request</h3>
+            <div class="form-row">
+                <div class="input-group">
+                    <label><i class="fas fa-car-side"></i> Selected Brand</label>
+                    <input type="text" id="selectedBrandDisplay" readonly placeholder="Click on a brand above" style="background:#252525;">
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-tag"></i> Model (write manually)</label>
+                    <input type="text" id="carModel" placeholder="e.g. Hilux, Polo, i30, CX-5">
+                </div>
+            </div>
+            <div class="input-group">
+                <label><i class="fas fa-exclamation-triangle"></i> Describe the issue / fault</label>
+                <textarea id="issueDesc" placeholder="Example: Battery draining, engine light on, no crank, intermittent starting issues, sensor malfunction, electrical short..."></textarea>
+            </div>
+            <div style="display: flex; justify-content: flex-end; margin-top: 1.2rem;">
+                <button class="submit-wa" id="submitDiagnosticBtn"><i class="fab fa-whatsapp"></i> Send Diagnostic Request →</button>
+            </div>
+            <div class="info-note">
+                <i class="fas fa-shield-alt"></i> Your request will open WhatsApp with pre-filled details: Brand, Model & Issue. Our expert team will respond ASAP.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer contact -->
+<footer id="contact">
+    <div style="max-width: 800px; margin: auto;">
+        <i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> <strong>Hoz Auto Electrical & Diagnostics</strong> — Johannesburg, South Africa | <i class="fas fa-phone-alt"></i> +27 71 234 5678<br/>
+        <p style="margin-top: 1rem;">© 2025 Hoz Auto — Precision Electrical & Diagnostic Experts | Serving all SA provinces</p>
+        <div style="margin-top: 1rem;">
+            <a href="https://wa.me/27712345678?text=Hello%20Hoz%20Auto%2C%20I%20need%20assistance%20with%20my%20vehicle" target="_blank" style="color:var(--gold); margin: 0 10px;"><i class="fab fa-whatsapp"></i> WhatsApp Business</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // ---------- COMPREHENSIVE CAR BRANDS FOUND IN SOUTH AFRICA ----------
+    const carBrandsSA = [
+        { name: "Toyota", logo: "🚗", iconClass: "fas fa-car" },
+        { name: "Volkswagen", logo: "🚙", iconClass: "fas fa-caravan" },
+        { name: "Ford", logo: "🐎", iconClass: "fas fa-horse-head" },
+        { name: "Hyundai", logo: "🆎", iconClass: "fas fa-italic" },
+        { name: "Kia", logo: "🔑", iconClass: "fas fa-key" },
+        { name: "BMW", logo: "🔵", iconClass: "fab fa-bluetooth-b" },
+        { name: "Mercedes-Benz", logo: "⭐", iconClass: "fas fa-star" },
+        { name: "Audi", logo: "🔘", iconClass: "fas fa-circle" },
+        { name: "Nissan", logo: "💨", iconClass: "fas fa-wind" },
+        { name: "Honda", logo: "🏎️", iconClass: "fas fa-car-side" },
+        { name: "Mazda", logo: "🌀", iconClass: "fas fa-fan" },
+        { name: "Suzuki", logo: "🏍️", iconClass: "fas fa-motorcycle" },
+        { name: "Renault", logo: "💠", iconClass: "fas fa-diamond" },
+        { name: "Chevrolet", logo: "🏁", iconClass: "fas fa-flag-checkered" },
+        { name: "Opel", logo: "⚡", iconClass: "fas fa-bolt" },
+        { name: "Peugeot", logo: "🦁", iconClass: "fas fa-paw" },
+        { name: "Citroën", logo: "🧲", iconClass: "fas fa-magnet" },
+        { name: "Land Rover", logo: "🌍", iconClass: "fas fa-globe" },
+        { name: "Jaguar", logo: "🐆", iconClass: "fas fa-gem" },
+        { name: "Volvo", logo: "⚙️", iconClass: "fas fa-cogs" },
+        { name: "Subaru", logo: "⭐", iconClass: "fas fa-star-of-life" },
+        { name: "Mitsubishi", logo: "🔺", iconClass: "fas fa-shapes" },
+        { name: "Isuzu", logo: "🏔️", iconClass: "fas fa-mountain" },
+        { name: "Mahindra", logo: "🌾", iconClass: "fas fa-tractor" },
+        { name: "GWM", logo: "🏯", iconClass: "fas fa-building" },
+        { name: "Chery", logo: "🐉", iconClass: "fas fa-dragon" },
+        { name: "BAIC", logo: "🏛️", iconClass: "fas fa-landmark" },
+        { name: "Haval", logo: "🏞️", iconClass: "fas fa-tree" },
+        { name: "Foton", logo: "🚛", iconClass: "fas fa-truck" },
+        { name: "Porsche", logo: "🐎", iconClass: "fas fa-crown" },
+        { name: "Jeep", logo: "⛰️", iconClass: "fas fa-mountain" },
+        { name: "Mini", logo: "🎲", iconClass: "fas fa-cube" },
+        { name: "Lexus", logo: "💎", iconClass: "fas fa-gem" },
+        { name: "Tata", logo: "🐘", iconClass: "fas fa-elephant" },
+        { name: "BYD", logo: "🔋", iconClass: "fas fa-battery-full" }
+    ];
+
+    // remove duplicates
+    const uniqueBrandsMap = new Map();
+    carBrandsSA.forEach(b => {
+        if (!uniqueBrandsMap.has(b.name)) uniqueBrandsMap.set(b.name, b);
+    });
+    const southAfricanBrands = Array.from(uniqueBrandsMap.values());
+
+    let selectedBrandName = null;
+    let currentActiveElement = null;
+
+    function renderBrands(filterText = "") {
+        const grid = document.getElementById("brandsGrid");
+        if (!grid) return;
+        const filterLower = filterText.toLowerCase().trim();
+        const filtered = southAfricanBrands.filter(b => b.name.toLowerCase().includes(filterLower));
+        grid.innerHTML = "";
+        if (filtered.length === 0) {
+            grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:2rem;">🚫 No brands match "${filterText}"</div>`;
+            return;
+        }
+        filtered.forEach(brand => {
+            const card = document.createElement("div");
+            card.className = "brand-card";
+            if (selectedBrandName === brand.name) {
+                card.classList.add("active-brand");
+            }
+            if (selectedBrandName !== null && selectedBrandName !== brand.name) {
+                card.classList.add("disabled-brand");
+            } else {
+                card.classList.remove("disabled-brand");
+            }
+            const logoDiv = document.createElement("div");
+            logoDiv.className = "brand-logo";
+            logoDiv.innerHTML = brand.logo ? brand.logo : `<i class="${brand.iconClass}"></i>`;
+            const nameSpan = document.createElement("div");
+            nameSpan.className = "brand-name";
+            nameSpan.innerText = brand.name;
+            card.appendChild(logoDiv);
+            card.appendChild(nameSpan);
+            card.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if (selectedBrandName === brand.name) {
+                    selectedBrandName = null;
+                    document.getElementById("selectedBrandDisplay").value = "";
+                    if (currentActiveElement) currentActiveElement.classList.remove("active-brand");
+                    currentActiveElement = null;
+                    renderBrands(filterText);
+                } else {
+                    selectedBrandName = brand.name;
+                    document.getElementById("selectedBrandDisplay").value = brand.name;
+                    renderBrands(filterText);
+                }
+            });
+            grid.appendChild(card);
+            if (selectedBrandName === brand.name) {
+                currentActiveElement = card;
+            }
+        });
+    }
+
+    const searchInput = document.getElementById("brandSearch");
+    if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+            renderBrands(e.target.value);
+        });
+    }
+
+    renderBrands("");
+
+    // WhatsApp integration
+    const BUSINESS_PHONE = "27712345678";
+
+    function generateWhatsAppLink(service = null, brand, model, issue) {
+        let baseMessage = `Hello Hoz Auto Electrical & Diagnostics (SA), I need assistance with my vehicle.`;
+        if (brand && brand.trim() !== "") {
+            baseMessage += `\n• Brand: ${brand}`;
+        }
+        if (model && model.trim() !== "") {
+            baseMessage += `\n• Model: ${model}`;
+        }
+        if (issue && issue.trim() !== "") {
+            baseMessage += `\n• Issue: ${issue}`;
+        }
+        if (service && service.trim() !== "") {
+            baseMessage += `\n• Requested Service: ${service}`;
+        }
+        baseMessage += `\n\nPlease get back to me. Thank you!`;
+        const encoded = encodeURIComponent(baseMessage);
+        return `https://wa.me/${BUSINESS_PHONE}?text=${encoded}`;
+    }
+
+    const waButtons = document.querySelectorAll(".wa-service");
+    waButtons.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const serviceName = btn.getAttribute("data-service");
+            const brandRaw = selectedBrandName ? selectedBrandName : "";
+            const modelRaw = document.getElementById("carModel")?.value || "";
+            const issueRaw = document.getElementById("issueDesc")?.value || "";
+            const waLink = generateWhatsAppLink(serviceName, brandRaw, modelRaw, issueRaw);
+            window.open(waLink, "_blank");
+        });
+    });
+
+    const submitDiag = document.getElementById("submitDiagnosticBtn");
+    if (submitDiag) {
+        submitDiag.addEventListener("click", () => {
+            const brandVal = selectedBrandName ? selectedBrandName : "";
+            const modelVal = document.getElementById("carModel")?.value.trim() || "";
+            const issueVal = document.getElementById("issueDesc")?.value.trim() || "";
+            if (!brandVal && !modelVal && !issueVal) {
+                alert("⚠️ Please select a car brand or provide at least model/issue to proceed.");
+                return;
+            }
+            if (!brandVal) {
+                if (!confirm("You haven't selected a brand. Continue anyway with model and issue?")) return;
+            }
+            const waLink = generateWhatsAppLink(null, brandVal, modelVal, issueVal);
+            window.open(waLink, "_blank");
+        });
+    }
+
+    const style = document.createElement('style');
+    style.textContent = `.brand-card.disabled-brand { cursor: not-allowed; opacity: 0.4; filter: grayscale(0.5); transition: 0.1s; } .brand-card:not(.disabled-brand):hover { background: #2c2418; border-color: #f5b04280; } .brand-card.active-brand { background: #2a1f0e; box-shadow: 0 0 0 1px gold; }`;
+    document.head.appendChild(style);
+
+    console.log("Hoz Auto SA | Loaded with " + southAfricanBrands.length + " local brands");
+</script>
+</body>
+</html>
